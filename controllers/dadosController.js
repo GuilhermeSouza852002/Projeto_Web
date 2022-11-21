@@ -23,9 +23,13 @@ let dados = [
 
 let ids = 3;
 
-roteador.get('/',(req, res)=>{
+roteador.get('/Home',(req, res)=>{
 
     res.status(200).render('homeSemLog', {dados});
+});
+
+roteador.get('/CadastroUsuario', (req, res)=>{
+    res.status(200).render('cadastroUsuario');
 });
 
 module.exports = roteador;
