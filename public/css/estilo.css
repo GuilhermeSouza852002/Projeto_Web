@@ -1,0 +1,159 @@
+/*Carrossel*/
+#carouselExampleIndicators {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-inner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+/*Navbar*/
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-item {
+    padding: 0 50px;
+}
+
+nav a {
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+}
+
+/*Posts*/
+.card-deck {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; 
+    height: 500px;
+    margin-top: 20px;
+}
+
+.TituloPost {
+    margin-top: 60px;
+    margin-left: 70px;
+}
+
+@media only screen and (max-device-width: 900px) {
+/*Carrossel*/
+#carouselExampleIndicators {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-inner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    }
+
+/*Navbar*/
+.navbar-nav {
+    margin-top: 20px;
+    
+}
+
+nav a {
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    
+}
+
+/*Posts*/
+.card-deck {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 700px; 
+    height: 700px;
+}
+
+
+.btn {
+    margin-left: auto;
+    
+}
+}
+
+
+@media only screen and (max-device-width: 700px) {
+/*Carrossel*/
+    #carouselExampleIndicators {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .carousel-inner {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+
+/*Navbar*/
+.navbar-nav {
+    margin-left: auto;
+}
+
+nav a {
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+
+}
+
+/*Posts*/
+.card-deck {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 500px; 
+    height: 500px;
+}
+}
+
+@media only screen and (max-device-width: 570px) {
+/*Carrossel*/
+    #carouselExampleIndicators {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .carousel-inner {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+
+/*Navbar*/
+.navbar-nav {
+    margin-left: auto;
+}
+
+nav a {
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+
+}
+
+/*Posts*/
+.card-deck {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 200px; 
+    height: 200px;
+}
+
+.TituloPost {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+}
+
