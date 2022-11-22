@@ -1,25 +1,39 @@
+body {
+    width: auto; 
+    height: auto;
+    background-image: url(../img/Fundo.jpg);
+}
+
 /*Carrossel*/
 #carouselExampleIndicators {
     margin-left: auto;
     margin-right: auto;
+    width: auto;
+    top: 40px;
 }
 
 .carousel-inner {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 90px;
+    width: auto;
 }
 
 /*Navbar*/
+#navbarBackgraud {
+    width: auto; 
+    height: auto;
+    background-image: url(../img/FundoNavBar.jpg);
+}
+
 .navbar-nav {
     margin-left: auto;
-    margin-right: auto;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .nav-item {
-    padding: 0 50px;
+    padding: 0 30px;
 }
 
 nav a {
@@ -31,42 +45,62 @@ nav a {
 .card-deck {
     margin-left: auto;
     margin-right: auto;
-    width: 700px; 
-    height: 500px;
-    margin-top: 20px;
+    width: auto; 
+    height: auto;
+    margin-top: 1px;
 }
 
 .TituloPost {
-    margin-top: 60px;
-    margin-left: 70px;
+    margin-top: 160px;
+    margin-left: 15px;
 }
 
 /*Formulario do usuario*/
 .card-header {
     margin-left: auto;
     margin-right: auto;
+    border: 0px;
 }
 
 .card {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 30px;
+}
+
+#backgroundLogin {
+    width: auto; 
+    height: auto;
+    background-image: url(../img/FundoNavBar.jpg);
 }
 
 @media only screen and (max-device-width: 900px) {
+/*body {
+    background-image: url(../img/Fundo.jpg);
+}*/
+
 /*Carrossel*/
 #carouselExampleIndicators {
     margin-left: auto;
     margin-right: auto;
+    width: auto;
+    top: 40px;
 }
 
 .carousel-inner {
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-    }
+    width: auto;
+}
 
 /*Navbar*/
+/*#navbarBackgraud {
+    width: auto; 
+    height: auto;
+    background-image: url(../img/FundoNavBar.jpg);
+}*/
+
 .navbar-nav {
     margin-top: 20px;
     
@@ -87,28 +121,39 @@ nav a {
     height: 700px;
 }
 
-
-.btn {
+.TituloPost {
     margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
+.btn {
+    margin-right: auto;
+}
 }
 
 
 @media only screen and (max-device-width: 700px) {
 /*Carrossel*/
-    #carouselExampleIndicators {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .carousel-inner {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 60px;
-    }
+#carouselExampleIndicators {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    top: 40px;
+}
+
+.carousel-inner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: auto;
+}
 
 /*Navbar*/
+/*#navbarBackgraud {
+    background-image: url(../img/FundoNavBar.jpg);
+}*/
+
 .navbar-nav {
     margin-left: auto;
 }
@@ -124,25 +169,39 @@ nav a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-    width: 500px; 
-    height: 500px;
-}
+    width: auto; 
+    height: auto;
 }
 
-@media only screen and (max-device-width: 570px) {
+.TituloPost {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+}
+
+@media only screen and (max-device-width: 575px) {
 /*Carrossel*/
-    #carouselExampleIndicators {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .carousel-inner {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 60px;
-    }
+#carouselExampleIndicators {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    top: 40px;
+}
+
+.carousel-inner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: auto;
+}
 
 /*Navbar*/
+/*#navbarBackgraud {
+    background-image: url(../img/FundoNavBar.jpg);
+}*/
+
 .navbar-nav {
     margin-left: auto;
 }

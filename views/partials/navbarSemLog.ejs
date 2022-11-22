@@ -1,7 +1,7 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbarBackgraud">
   <a class="navbar-brand" href="#">
-    <img src="../img/Maciota2.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-    Agiotagem.Net
+    <img src="../img/Maciota3.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+    BuscasJogadores.Net
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
@@ -12,15 +12,27 @@
         <a class="nav-link active" href="/Home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Estagios para agiotagem</a>
+        <a class="nav-link" href="#" >Jogos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/CadastroUsuario">Login</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Post
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Criar</a>
+          <a class="dropdown-item" href="#">Editar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Perfil <img src="../img/Maciota.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Entrar</a>
+          <a class="dropdown-item" href="/CadastroUsuario">Criar</a>
+          <a class="dropdown-item" href="#">Editar</a>
+        </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
   </div>
 </nav>
