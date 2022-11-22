@@ -32,4 +32,8 @@ roteador.get('/CadastroUsuario', (req, res)=>{
     res.status(200).render('cadastroUsuario');
 });
 
+roteador.get('/Jogos', (req, res)=>{
+    res.status(200).render('jogos');
+});
+
 module.exports = roteador;
