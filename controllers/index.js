@@ -1,4 +1,4 @@
-const dados = require('./dadosController');
+const dados = require('./navegationController');
 const usuarios = require('./usuariosController');
 
 const controllers = {

@@ -8,7 +8,7 @@ const path = require('path');
 
 //Configura as variáveis do Node para a View Engine EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/views/paginas'));
 
 //Permite obter informações do corpo das requisições
 app.use(express.urlencoded({extended:true}));
