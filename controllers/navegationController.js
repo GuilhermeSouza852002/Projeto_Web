@@ -1,4 +1,4 @@
-const {Router} = require('express');
+/*const {Router} = require('express');
 
 const roteador = Router()
 
@@ -17,4 +17,4 @@ roteador.get('/CadastroUsuario',(req, res)=>{
     res.status(200).render('../paginas/formularioCadastroUsuario');
 });
 
-module.exports = roteador;
+module.exports = roteador;*/

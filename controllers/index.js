@@ -1,9 +1,8 @@
-const dados = require('./navegationController');
-const usuarios = require('./usuariosController');
+//const dados = require('./navegationController');
+const usuariosController = require('./usuariosController');
 
 const controllers = {
-    dados: dados,
-    usuarios: usuarios
+    users: usuariosController
 }
 
 module.exports = controllers;
