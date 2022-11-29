@@ -1,7 +1,8 @@
-//const dados = require('./navegationController');
+//const postsController = require('./postsController');
 const usuariosController = require('./usuariosController');
 
 const controllers = {
+    //posts: postsController,
     users: usuariosController
 }
 

@@ -10,7 +10,7 @@ const sessionOptions = {secret: 'frasealeatoria', cookie: { maxAge: oneDay }, re
 app.use(session(sessionOptions));
 
 function secure_pass(req, res, next) {
-    if (req.session.login || req.path==='/HomeLog') {
+    if (req.session.login || req.path==='/Login') {
         next();
     } else {
        res.redirect("/Login");

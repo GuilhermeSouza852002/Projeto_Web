@@ -52,4 +52,11 @@ roteador.post('/Login', async (req, res)=>{
        
 });
 
+roteador.post('/CadastroUsuario', async (req, res)=>{
+    const {username, useremail, password} = req.body;
+    await User.create({username, useremail, password});
+    res.redirect('/Login');
+       
+});
+
 module.exports = roteador;
