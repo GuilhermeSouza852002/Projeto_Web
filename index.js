@@ -10,10 +10,10 @@ const sessionOptions = {secret: 'frasealeatoria', cookie: { maxAge: oneDay }, re
 app.use(session(sessionOptions));
 
 function secure_pass(req, res, next) {
-    if (req.session.login || req.path==='/Login') {
+    if (req.session.login || req.path==='/login') {
         next();
     } else {
-       res.redirect("/Login");
+       res.redirect("../paginas/login");
     }
 }
 
