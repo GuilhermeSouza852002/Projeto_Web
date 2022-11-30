@@ -1,5 +1,5 @@
 const express = require('express');
-const {users} = require('./controllers');
+const {users, home} = require('./controllers');
 const path = require('path');
 const methodOverride = require('method-override');
 const app = express();
@@ -13,7 +13,7 @@ function secure_pass(req, res, next) {
     if (req.session.login || req.path==='/login') {
         next();
     } else {
-       res.redirect("../paginas/login");
+       res.redirect("/usuarios/login");
     }
 }
 
@@ -33,7 +33,12 @@ app.use(express.static(path.join(__dirname, '/public')));
 // de POST para PATCH ou DELETE
 app.use(methodOverride('_method'));
 
-app.use('/', users);
+
+/*Criar um midleware com a rota da página inicial 
+app.use('/home', home);
+*/
+app.use('/home', home);
+app.use('/usuarios', users);
 app.use(secure_pass);
 
 app.listen(80, ()=>{
