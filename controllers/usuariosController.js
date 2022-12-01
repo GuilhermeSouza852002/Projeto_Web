@@ -45,7 +45,7 @@ roteador.post('/login', async (req, res)=>{
     req.session.login = false;
     if(user){
         req.session.login = true;
-        res.redirect('#');
+        res.redirect('/home');
     }else{
         res.redirect('/usuarios/login');
     }   
