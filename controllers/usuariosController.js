@@ -24,7 +24,7 @@ roteador.get('/cadastrousuario', (req, res)=>{
 });
 
 roteador.get('/:id', async(req, res)=>{
-
+    //res.status(200).render('apresenta', {usuario});
 });
 
 roteador.get('/:id/edit', async(req, res)=>{

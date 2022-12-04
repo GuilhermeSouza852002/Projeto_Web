@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+<body>
+    <h1>Edição do poster</h1>
+    <form action = "/publicacoes/<%=publicacao.id%>?_method=PATCH" method="POST">
+        <textarea name="poster" id='' cols='30' rows='10'><%=publicacao.poster%></textarea>
+        <button>Salvar</button>
+    </form>
+<%- include('../partials/footer') %>

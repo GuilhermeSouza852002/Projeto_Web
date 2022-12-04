@@ -1,9 +1,9 @@
-//const postsController = require('./postsController');
+const postersController = require('./postersController');
 const homeController = require('./homeController');
 const usuariosController = require('./usuariosController');
 
 const controllers = {
-    //posts: postsController,
+    posters: postersController,
     users: usuariosController,
     home: homeController
 }

@@ -1,5 +1,5 @@
 const express = require('express');
-const {users, home} = require('./controllers');
+const {users, home, posters} = require('./controllers');
 const path = require('path');
 const methodOverride = require('method-override');
 const app = express();
@@ -20,7 +20,8 @@ function secure_pass(req, res, next) {
 
 //Configura as variáveis do Node para a View Engine EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views/paginas'));
+app.set('views', path.join(__dirname, '/views/usuario'));
+app.set('views', path.join(__dirname, '/views/posters'));
 
 //Permite obter informações do corpo das requisições
 app.use(express.urlencoded({extended:true}));
@@ -39,6 +40,7 @@ app.use('/home', home);
 */
 app.use('/home', home);
 app.use('/usuarios', users);
+app.use('/publicacoes', posters)
 app.use(secure_pass);
 
 app.listen(80, ()=>{
