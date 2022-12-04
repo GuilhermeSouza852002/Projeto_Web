@@ -12,28 +12,28 @@ roteador.get('/', async(req, res)=>{
         ]
      });
 
-     publicacoes.username = publicacoes.User.username;
+     publicacoes.username = publicacoes.User?.username;
 
-    res.render('index', {publicacoes});
+    res.render('posters/index', {publicacoes});
 });
 
 roteador.get('/novo', (req, res)=>{
-    res.render('novo');
+    res.render('posters/novo');
 });
 
-roteador.get('/:id', async(req, res)=>{
+roteador.get('/:id/', async(req, res)=>{
     const {id} = req.params;
     let publicacao = await Poster.findByPk(id,{
         include: [{model:User}]
     });
 
-    res.render('apresenta', {publicacao});
+    res.render('posters/apresenta', {publicacao});
 });
 
 roteador.get('/:id/edit', async(req, res)=>{
     const {id} = req.params;
     let publicacao = await Poster.findByPk(id);
-    res.render('edit', {publicacao});
+    res.render('posters/edit', {publicacao});
 });
 
 roteador.post('/', async (req, res)=>{

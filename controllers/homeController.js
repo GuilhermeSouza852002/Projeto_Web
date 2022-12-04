@@ -4,7 +4,7 @@ const roteador = Router();
 
 roteador.get('/', async(req, res)=>{
 
-    res.status(200).render('home');
+    res.status(200).render('usuario/home');
 });
 
 module.exports = roteador;

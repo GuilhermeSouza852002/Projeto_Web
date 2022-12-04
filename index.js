@@ -20,9 +20,7 @@ function secure_pass(req, res, next) {
 
 //Configura as variáveis do Node para a View Engine EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views/usuario'));
-app.set('views', path.join(__dirname, '/views/posters'));
-
+app.set('views', path.join(__dirname, './views'));
 //Permite obter informações do corpo das requisições
 app.use(express.urlencoded({extended:true}));
 
@@ -40,8 +38,8 @@ app.use('/home', home);
 */
 app.use('/home', home);
 app.use('/usuarios', users);
-app.use('/publicacoes', posters)
 app.use(secure_pass);
+app.use('/publicacoes', posters)
 
 app.listen(80, ()=>{
     console.log('Execução na porta 80!')

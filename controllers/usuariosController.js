@@ -16,11 +16,16 @@ roteador.post('/novo', async (req, res)=>{
 });
 
 roteador.get('/login', async(req, res)=>{
-    res.status(200).render('login');
+    res.status(200).render('usuario/login');
+});
+
+roteador.get('/logoff', async(req, res)=>{
+    req.session.destroy();
+    res.redirect('/usuarios/login');
 });
 
 roteador.get('/cadastrousuario', (req, res)=>{
-    res.status(200).render('formularioCadastroUsuario');    
+    res.status(200).render('usuario/formularioCadastroUsuario');    
 });
 
 roteador.get('/:id', async(req, res)=>{
@@ -32,12 +37,11 @@ roteador.get('/:id/edit', async(req, res)=>{
 });
 
 roteador.post('/login', async (req, res)=>{
-    const {useremail, username, password} = req.body;
+    const {useremail, password} = req.body;
     
     const user = await User.findOne({
         where: {
             useremail: useremail,
-            username: username,
             password: password
         }   
     });
@@ -45,7 +49,7 @@ roteador.post('/login', async (req, res)=>{
     req.session.login = false;
     if(user){
         req.session.login = true;
-        res.redirect('/home');
+        res.redirect('/publicacoes');
     }else{
         res.redirect('/usuarios/login');
     }   
