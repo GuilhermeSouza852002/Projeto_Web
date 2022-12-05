@@ -16,8 +16,6 @@ roteador.get('/settings', async(req, res)=>{
     res.status(200).render('usuario/settings', {usuarios});
 });
 
-
-
 //Criação de usuario
 roteador.post('/novo', async (req, res)=>{
     const {username, useremail, password} = req.body;
