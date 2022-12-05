@@ -21,7 +21,7 @@ roteador.get('/login', async(req, res)=>{
 
 roteador.get('/logoff', async(req, res)=>{
     req.session.destroy();
-    res.redirect('/usuarios/login');
+    res.redirect('/home');
 });
 
 roteador.get('/cadastrousuario', (req, res)=>{

@@ -83,6 +83,12 @@ nav a {
     left: 20px; 
 }
 
+/*Imagens*/
+/*Perfis*/
+#icones {
+    border-radius: 200px;
+}
+
 @media only screen and (max-device-width: 900px) {
 /*body {
     background-image: url(../img/Fundo.jpg);
