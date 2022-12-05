@@ -1,15 +1,14 @@
 <%- include('../partials/header') %>
 <body>
-    <h1>posters</h1>
+    <h1>usuarios</h1>
     <ul>
-        <% for( let c of publicacoes ) { %>
+        <% for( let c of usuarios ) { %>
             <li>
-                <%=c.poster%> - <b><%=c.username%></b>
-                <a href="/publicacoes/<%=c.id%>">Detalhes</a>
+                <b><%=c.username%> - <%= c.useremail %> </b>
+                <a href="/usuarios/<%=c.id%>">Modificar</a>
             </li>
         <% } %>
     </ul>
-
     <a href="/publicacoes/novo">Novo poster</a>
     <a href="/home">Home</a>
 <%- include('../partials/footer') %>

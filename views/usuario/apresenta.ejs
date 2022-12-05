@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<body>
+    <%=usuario.id%>
+    <h2><%=usuario.User.username%> - <%=usuario.User.useremail%></h2>
+    <a href="/usuarios">Voltar para o index</a>
+    <a href="/usuarios/<%=usuario.id%>/edit">Editar poster</a>
+    <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE">
+        <button>Apagar</button>
+    </form>
+<%- include('../partials/footer') %>
