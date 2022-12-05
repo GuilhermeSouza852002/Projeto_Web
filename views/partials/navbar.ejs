@@ -11,6 +11,17 @@
       <li class="nav-item">
         <a class="nav-link" href="/home">Home</a>
       </li>
+      <% if ( logado ) { %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/posts" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Post
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Criar</a>
+            <a class="dropdown-item" href="#">Editar</a>
+          </div>
+        </li>
+        <% } else { %> 
       <li class="nav-item">
         <a class="nav-link" href="/posts">Posts</a>
       </li>
@@ -21,9 +32,9 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="/usuarios/login">Entrar</a>
           <a class="dropdown-item" href="/usuarios/cadastrousuario">Criar</a>
-          <a class="dropdown-item" href="">Editar</a>
         </div>
       </li>
+      <% } %> 
     </ul>
   </div>
 </nav>
