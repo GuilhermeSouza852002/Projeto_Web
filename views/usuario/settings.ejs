@@ -1,11 +1,12 @@
 <%- include('../partials/header') %>
 <body>
-        <h2>Usuario: <%=usuario.User.username%></h2>
-        <a href="/usuarios">Voltar para o index</a>
-        <a href="/usuarios/<%=usuario.id%>/edit">Editar usuario</a>
-        <form method="POST" action="/publicacoes/<%=usuario.id %>?_method=DELETE">
-            <button>Apagar</button>
-        </form>
-    <a href="/publicacoes/novo">Novo poster</a>
-    <a href="/home">Home</a>
+    <h2><%=usuario.username%></h2>
+    <h2><%=usuario.useremail%></h2>
+    <h2><%=usuario.password%></h2>
+    <a href="/usuario/<%=usuario.id%>/edit">Editar usuario</a>
+    <form method="POST" action="/usuario/<%=usuario.id %>?_method=DELETE">
+        <button>Apagar</button>
+    </form>
+    <a href="/home">Voltar para o index</a>
+
 <%- include('../partials/footer') %>

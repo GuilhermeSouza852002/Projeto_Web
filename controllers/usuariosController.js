@@ -9,12 +9,19 @@ const roteador = Router();
 
 //configurações do usuario
 roteador.get('/settings', async(req, res)=>{
-    const usuarios = await User.findAll({
-
-     });
-    usuarios.username = usuarios.User?.username;
-    res.status(200).render('usuario/settings', {usuarios});
+    const {username, useremail, password} = req.session;
+    let usuario = await User.findAll(username, useremail, password, {
+        where: {
+            username: req.session.username,
+            useremail: req.session.useremail,
+            password: req.session.password
+        }   
+    });
+ 
+    res.status(200).render('usuario/settings', {usuario});
 });
+
+
 
 //Criação de usuario
 roteador.post('/novo', async (req, res)=>{
