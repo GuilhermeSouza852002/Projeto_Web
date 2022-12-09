@@ -43,12 +43,34 @@ roteador.get('/cadastrousuario', (req, res)=>{
 });
 
 //lista usuario
-roteador.get('/:id', async(req, res)=>{
+roteador.get('/:id', async(req, res)=>{ 
+
+    const {id} = req.params;
+    let usuario = await User.findByPk(id);
+
+    res.redirect('/usuarios/settings', {usuario});
+    //res.send({usuario});
 });
 
-//edita usuario
+//renderiza usuario
 roteador.get('/:id/edit', async(req, res)=>{
+    const {id} = req.params;
+    let usuario = await User.findByPk(id);
+    res.send({usuario});
+    
+});
 
+//atualizar
+roteador.patch('/:id', async(req, res)=>{
+    const {username, useremail} = req.body;
+    await User.update(
+        {username, useremail},
+        {
+            where: {id: req.params.id}
+        }
+    );
+
+    res.send("Usuario atualizado");
 });
 
 //fazer login com email e senha
@@ -76,6 +98,14 @@ roteador.post('/login', async (req, res)=>{
 //apaga usuario
 roteador.delete('/:id', async(req, res)=>{
 
+    await User.destroy(
+        {
+            where: {id: req.params.id}
+        }
+    );
+
+    res.send("Usuario deletado");
 });
+
 
 module.exports = roteador;

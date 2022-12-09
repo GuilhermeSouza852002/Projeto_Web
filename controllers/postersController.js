@@ -21,7 +21,7 @@ roteador.get('/novo', (req, res)=>{
     res.render('posters/novo');
 });
 
-roteador.get('/:id/', async(req, res)=>{
+roteador.get('/:id', async(req, res)=>{
     const {id} = req.params;
     let publicacao = await Poster.findByPk(id,{
         include: [{model:User}]
