@@ -47,7 +47,7 @@ roteador.post('/posters', async (req, res)=>{
      }else{
         const userId = id;
         await Poster.create({username, poster, userId});
-        res.redirect('/publicacoes');
+        res.redirect('/publicacoes/posters');
      }
 
 });
@@ -75,7 +75,7 @@ roteador.delete('/:id', async(req, res)=>{
         }
     );
 
-    res.redirect('/publicacoes');
+    res.redirect('/publicacoes/posters');
 });
 
 module.exports = roteador;
