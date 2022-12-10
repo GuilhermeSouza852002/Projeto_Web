@@ -9,7 +9,20 @@ const roteador = Router();
 
 //configurações do usuario
 roteador.get('/settings', async(req, res)=>{
-    const {username, useremail, password} = req.session;
+    const usuarios = await User.findAll({
+ 
+     });
+
+     usuarios.username = usuarios.User?.username;
+     usuarios.useremail = usuarios.User?.useremail;
+     usuarios.password = usuarios.User?.password;
+
+     res.status(200).render('usuario/settings', {usuarios});
+
+
+
+});
+    /*const {username, useremail, password} = req.session;
     let usuario = await User.findAll(username, useremail, password, {
         where: {
             username: req.session.username,
@@ -19,7 +32,7 @@ roteador.get('/settings', async(req, res)=>{
     });
  
     res.status(200).render('usuario/settings', {usuario});
-});
+});*/
 
 
 
@@ -53,9 +66,12 @@ roteador.get('/cadastrousuario', (req, res)=>{
 roteador.get('/:id', async(req, res)=>{ 
 
     const {id} = req.params;
-    let usuario = await User.findByPk(id);
+    let usuario = await User.findByPk(id,{
+        
+    });
 
-    res.redirect('/usuarios/settings', {usuario});
+    res.status(200).render('usuario/infoUsuario', {usuario});
+    //res.redirect('/usuarios/settings', {usuario});
     //res.send({usuario});
 });
 
@@ -63,21 +79,22 @@ roteador.get('/:id', async(req, res)=>{
 roteador.get('/:id/edit', async(req, res)=>{
     const {id} = req.params;
     let usuario = await User.findByPk(id);
-    res.send({usuario});
+    res.status(200).render('usuario/editUsuario', {usuario});
+    //res.send({usuario});
     
 });
 
 //atualizar
 roteador.patch('/:id', async(req, res)=>{
-    const {username, useremail} = req.body;
+    const {username, useremail, password} = req.body;
     await User.update(
-        {username, useremail},
+        {username, useremail, password},
         {
             where: {id: req.params.id}
         }
     );
 
-    res.send("Usuario atualizado");
+    res.redirect('/usuarios/settings');
 });
 
 //fazer login com email e senha
@@ -90,7 +107,6 @@ roteador.post('/login', async (req, res)=>{
             password: password
         }   
     });
-
 //criando sessão ao validar login
     req.session.login = false;
     if(user){
@@ -111,7 +127,7 @@ roteador.delete('/:id', async(req, res)=>{
         }
     );
 
-    res.send("Usuario deletado");
+    res.redirect('/usuarios/settings');
 });
 
 

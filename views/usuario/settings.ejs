@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
 <body>
-    <h2><%=usuario.username%></h2>
-    <h2><%=usuario.useremail%></h2>
-    <h2><%=usuario.password%></h2>
-    <a href="/usuario/<%=usuario.id%>/edit">Editar usuario</a>
-    <form method="POST" action="/usuario/<%=usuario.id %>?_method=DELETE">
-        <button>Apagar</button>
-    </form>
-    <a href="/home">Voltar para o index</a>
+    <h1>usuarios</h1>
+    <ul>
+        <% for( let c of usuarios ) { %>
+            <li>
+                <b><%=c.username%> - <%=c.useremail%> - <%=c.password%></b>
+                <a href="/usuarios/<%=c.id%>">Detalhes</a>
+            </li>
+        <% } %>
+    </ul>
+
+    <a href="/home">Voltar para pagina principal</a>
 
 <%- include('../partials/footer') %>

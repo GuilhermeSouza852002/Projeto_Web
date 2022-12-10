@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+    <h1>ID do usuario: <%=usuario.id%></h1>
+    <h2><%=usuario.username%></h2>
+    <h2><%=usuario.useremail%></h2>
+    <h2><%=usuario.password%></h2>
+    <a href="/usuarios/<%=usuario.id%>/edit">Editar usuario</a>
+    <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE">
+        <button>Apagar</button>
+    </form>
+<a href="/home">Voltar para o index</a>
+<%- include('../partials/footer') %>
