@@ -4,7 +4,7 @@ const {Router} = require('express');
 const roteador = Router();
 //CRUD - Create, Read, Update, Destroy
 //em REST
-roteador.get('/', async(req, res)=>{
+roteador.get('/posters', async(req, res)=>{
     
     const publicacoes = await Poster.findAll({
         include: [
@@ -13,8 +13,7 @@ roteador.get('/', async(req, res)=>{
      });
 
      publicacoes.username = publicacoes.User?.username;
-
-    res.render('posters/index', {publicacoes});
+     res.render('posters/index', {publicacoes});
 });
 
 roteador.get('/novo', (req, res)=>{
@@ -36,7 +35,7 @@ roteador.get('/:id/edit', async(req, res)=>{
     res.render('posters/edit', {publicacao});
 });
 
-roteador.post('/', async (req, res)=>{
+roteador.post('/posters', async (req, res)=>{
     const {username, poster} = req.body;
     
     const {id} = await User.findOne({
@@ -65,7 +64,7 @@ roteador.patch('/:id', async(req, res)=>{
         }
     );
 
-    res.redirect('/publicacoes');
+    res.redirect('/publicacoes/posters');
 });
 
 roteador.delete('/:id', async(req, res)=>{

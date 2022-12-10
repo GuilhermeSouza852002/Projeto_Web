@@ -37,8 +37,9 @@ app.use('/home', home);
 */
 app.use('/home', home);
 app.use('/usuarios', users);
-app.use(secure_pass);
 app.use('/publicacoes', posters)
+app.use(secure_pass);
+
 
 app.listen(80, ()=>{
     console.log('Execução na porta 80!')

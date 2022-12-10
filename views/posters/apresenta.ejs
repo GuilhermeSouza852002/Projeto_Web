@@ -1,10 +1,13 @@
 <%- include('../partials/header') %>
 <body>
-    <h1>ID do poster: <%=publicacao.id%></h1>
-    <h2><%=publicacao.poster%> - <%=publicacao.User.username%></h2>
-    <a href="/publicacoes">Voltar para o index</a>
-    <a href="/publicacoes/<%=publicacao.id%>/edit">Editar poster</a>
-    <form method="POST" action="/publicacoes/<%=publicacao.id %>?_method=DELETE">
-        <button>Apagar</button>
-    </form>
+<h1>ID do publicacao: <%=publicacao.id%></h1>
+<h2><%=publicacao.poster%> - <%=publicacao.User.username%></h2>
+<a href="/publicacoes">Voltar para o index</a>
+<a href="/publicacoes/<%=publicacao.id%>/edit">Editar comentário</a>
+<form method="POST" action="/publicacoes/<%=publicacao.id %>?_method=DELETE">
+    <button>Apagar</button>
+</form>
+<a href="/home">Voltar para o index</a>
 <%- include('../partials/footer') %>
+
+
