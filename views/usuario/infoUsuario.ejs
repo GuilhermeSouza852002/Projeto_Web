@@ -1,11 +1,21 @@
 <%- include('../partials/header') %>
-    <h1>ID do usuario: <%=usuario.id%></h1>
-    <h2><%=usuario.username%></h2>
-    <h2><%=usuario.useremail%></h2>
-    <h2><%=usuario.password%></h2>
-    <a href="/usuarios/<%=usuario.id%>/edit">Editar usuario</a>
-    <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE">
-        <button>Apagar</button>
-    </form>
-<a href="/home">Voltar para o index</a>
-<%- include('../partials/footer') %>
+    <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
+        <div class="card-body">
+            <div class="caixaConteudo">
+                <h1>ID do usuario: <%=usuario.id%>
+                </h1>
+                <h2>Nome: <%=usuario.username%>
+                </h2>
+                <h2>Email: <%=usuario.useremail%>
+                </h2>
+                <h2>Senha: <%=usuario.password%>
+                </h2>
+            </div>
+            <a href="/usuarios/<%=usuario.id%>/edit">Editar usuario</a>
+            <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE">
+                <button>Apagar</button>
+            </form>
+            <a href="/home">Voltar para o index</a>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>

@@ -1,10 +1,12 @@
 <%- include('../partials/header') %>
-<body>
-    <h1>Editar usuario</h1>
-    <form action = "/usuarios/<%=usuario.id%>?_method=PATCH" method="POST">
-        <textarea name="username" id='' cols='30' rows='10'><%=usuario.username%></textarea>
-        <textarea name="useremail" id='' cols='30' rows='10'><%=usuario.useremail%></textarea>
-        <textarea name="password" id='' cols='30' rows='10'><%=usuario.password%></textarea>
-        <button>Salvar</button>
-    </form>
-<%- include('../partials/footer') %>
+
+    <body>
+
+        <h1>Editar usuario</h1>
+        <form action="/usuarios/<%=usuario.id%>?_method=PATCH" method="POST">
+            <textarea name="username" id='' cols='30' rows='10'><%=usuario.username%></textarea>
+            <textarea name="useremail" id='' cols='30' rows='10'><%=usuario.useremail%></textarea>
+            <textarea name="password" id='' cols='30' rows='10'><%=usuario.password%></textarea>
+            <button>Salvar</button>
+        </form>
+        <%- include('../partials/footer') %>

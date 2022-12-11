@@ -1,8 +1,33 @@
 /*Home*/
 body {
-    width: auto; 
+    width: auto;
     height: auto;
     background-image: url(../img/Fundo.jpg);
+}
+
+li {
+    list-style-type: none;
+}
+
+.caixa {
+    width: auto;
+    height: auto;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-image: url(../img/Fundo.jpg);
+
+
+}
+
+.caixaConteudo {
+    width: auto;
+    height: auto;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+    background-image: url(../img/FundoCard.jpg);
 }
 
 /*Carrossel*/
@@ -22,7 +47,7 @@ body {
 
 /*Navbar*/
 #navbarBackgraud {
-    width: auto; 
+    width: auto;
     height: auto;
     background-image: url(../img/FundoNavBar.jpg);
 }
@@ -46,7 +71,7 @@ nav a {
 #cardDeckHome {
     margin-left: auto;
     margin-right: auto;
-    width: auto; 
+    width: auto;
     height: auto;
     margin-top: 1px;
 }
@@ -70,7 +95,7 @@ nav a {
 }
 
 #backgroundLogin {
-    width: auto; 
+    width: auto;
     height: auto;
     background-image: url(../img/FundoNavBar.jpg);
 }
@@ -80,7 +105,7 @@ nav a {
 #pesquisaJogos {
     margin-top: 130px;
     width: 300px;
-    left: 20px; 
+    left: 20px;
 }
 
 /*Imagens*/
@@ -90,156 +115,157 @@ nav a {
 }
 
 @media only screen and (max-device-width: 900px) {
-/*body {
+    /*body {
     background-image: url(../img/Fundo.jpg);
 }*/
 
-/*Carrossel*/
-#carouselExampleIndicators {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    top: 40px;
-}
+    /*Carrossel*/
+    #carouselExampleIndicators {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        top: 40px;
+    }
 
-.carousel-inner {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: auto;
-}
+    .carousel-inner {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: auto;
+    }
 
-/*Navbar*/
-/*#navbarBackgraud {
+    /*Navbar*/
+    /*#navbarBackgraud {
     width: auto; 
     height: auto;
     background-image: url(../img/FundoNavBar.jpg);
 }*/
 
-.navbar-nav {
-    margin-top: 20px;
-    
-}
+    .navbar-nav {
+        margin-top: 20px;
 
-nav a {
-    padding: 0 10px 0 10px;
-    text-decoration: none;
-    
-}
+    }
 
-/*Posts*/
-#cardDeckHome {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: 700px; 
-    height: 700px;
-}
+    nav a {
+        padding: 0 10px 0 10px;
+        text-decoration: none;
 
-.TituloPost {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+    }
 
-.btn {
-    margin-right: auto;
-}
+    /*Posts*/
+    #cardDeckHome {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: 700px;
+        height: 700px;
+    }
+
+    .TituloPost {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .btn {
+        margin-right: auto;
+    }
 }
 
 
 @media only screen and (max-device-width: 700px) {
-/*Carrossel*/
-#carouselExampleIndicators {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    top: 40px;
-}
 
-.carousel-inner {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: auto;
-}
+    /*Carrossel*/
+    #carouselExampleIndicators {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        top: 40px;
+    }
 
-/*Navbar*/
-/*#navbarBackgraud {
+    .carousel-inner {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: auto;
+    }
+
+    /*Navbar*/
+    /*#navbarBackgraud {
     background-image: url(../img/FundoNavBar.jpg);
 }*/
 
-.navbar-nav {
-    margin-left: auto;
-}
+    .navbar-nav {
+        margin-left: auto;
+    }
 
-nav a {
-    padding: 0 10px 0 10px;
-    text-decoration: none;
+    nav a {
+        padding: 0 10px 0 10px;
+        text-decoration: none;
 
-}
+    }
 
-/*Posts*/
-#cardDeckHome {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: auto; 
-    height: auto;
-}
+    /*Posts*/
+    #cardDeckHome {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: auto;
+        height: auto;
+    }
 
-.TituloPost {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+    .TituloPost {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
 }
 
 @media only screen and (max-device-width: 575px) {
-/*Carrossel*/
-#carouselExampleIndicators {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    top: 40px;
-}
 
-.carousel-inner {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: auto;
-}
+    /*Carrossel*/
+    #carouselExampleIndicators {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        top: 40px;
+    }
 
-/*Navbar*/
-/*#navbarBackgraud {
+    .carousel-inner {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: auto;
+    }
+
+    /*Navbar*/
+    /*#navbarBackgraud {
     background-image: url(../img/FundoNavBar.jpg);
 }*/
 
-.navbar-nav {
-    margin-left: auto;
-}
+    .navbar-nav {
+        margin-left: auto;
+    }
 
-nav a {
-    padding: 0 10px 0 10px;
-    text-decoration: none;
+    nav a {
+        padding: 0 10px 0 10px;
+        text-decoration: none;
 
-}
+    }
 
-/*Posts*/
-#cardDeckHome {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: 200px; 
-    height: 200px;
-}
+    /*Posts*/
+    #cardDeckHome {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        width: 200px;
+        height: 200px;
+    }
 
-.TituloPost {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    .TituloPost {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
-}
-

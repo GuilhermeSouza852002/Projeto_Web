@@ -1,19 +1,19 @@
 const express = require('express');
-const {users, home, posters} = require('./controllers');
+const { users, home, posters } = require('./controllers');
 const path = require('path');
 const methodOverride = require('method-override');
 const app = express();
 const session = require('express-session');
 const oneDay = 1000 * 60 * 60 * 24;
-const sessionOptions = {secret: 'frasealeatoria', cookie: { maxAge: oneDay }, resave: false, saveUninitialized: false};
+const sessionOptions = { secret: 'frasealeatoria', cookie: { maxAge: oneDay }, resave: false, saveUninitialized: false };
 
 app.use(session(sessionOptions));
 
 function secure_pass(req, res, next) {
-    if (req.session.login || req.path==='/login') {
+    if (req.session.login || req.path === '/login') {
         next();
     } else {
-       res.redirect("/usuarios/login");
+        res.redirect("/usuarios/login");
     }
 }
 
@@ -21,7 +21,7 @@ function secure_pass(req, res, next) {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 //Permite obter informações do corpo das requisições
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 
 //Define diretório para arquivos estáticos
 //app.use(express.static('public'));
@@ -41,6 +41,6 @@ app.use('/publicacoes', posters)
 app.use(secure_pass);
 
 
-app.listen(80, ()=>{
+app.listen(80, () => {
     console.log('Execução na porta 80!')
 });

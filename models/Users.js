@@ -1,4 +1,4 @@
-const User = (sequelize, DataTypes) =>{
+const User = (sequelize, DataTypes) => {
     return sequelize.define('User', {
         username: DataTypes.STRING,
         useremail: DataTypes.STRING,

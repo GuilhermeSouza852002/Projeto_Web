@@ -3,7 +3,8 @@
     <img src="../img/fogueira.png" width="40" height="40" class="d-inline-block align-top" alt="" id="icones">
     Controle de usuarios e posts
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -13,8 +14,9 @@
       </li>
       <% if ( logado ) { %>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Post
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Post
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/publicacoes/novo">Criar</a>
@@ -22,28 +24,29 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= usuarioLogado %>  <img src="../img/ornstein_monstrando_lingua.jpg" width="40" height="40" class="d-inline-block align-top" alt="" id="icones">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <%= usuarioLogado %> <img src="../img/ornstein_monstrando_lingua.jpg" width="40" height="40"
+                class="d-inline-block align-top" alt="" id="icones">
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/usuarios/settings">Settingns</a>
             <a class="dropdown-item" href="/usuarios/logoff">Logoff</a>
           </div>
         </li>
-        <% } else { %> 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Posts</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Perfil <img src="../img/PerfilVazio.png" width="40" height="40" class="d-inline-block align-top" alt="" id="icones">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/usuarios/login">Entrar</a>
-          <a class="dropdown-item" href="/usuarios/cadastrousuario">Criar</a>
-        </div>
-      </li>
-      <% } %> 
+        <% } else { %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Perfil <img src="../img/PerfilVazio.png" width="40" height="40" class="d-inline-block align-top" alt=""
+                id="icones">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/usuarios/login">Entrar</a>
+              <a class="dropdown-item" href="/usuarios/cadastrousuario">Criar</a>
+            </div>
+          </li>
+          <% } %>
     </ul>
   </div>
 </nav>

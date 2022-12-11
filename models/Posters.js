@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
         userId: DataTypes.STRING,
         poster: DataTypes.STRING
     }, {});
-    Poster.associate = function(models) {
-        Poster.belongsTo(models.User, {foreignKey: 'userId'})
+    Poster.associate = function (models) {
+        Poster.belongsTo(models.User, { foreignKey: 'userId' })
     };
     return Poster;
-  };
+};
