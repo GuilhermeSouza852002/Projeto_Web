@@ -55,7 +55,7 @@ li {
 #navbarBackgraud {
     width: auto;
     height: auto;
-    background-image: url(../img/FundoNavBar.jpg);
+    background-image: url(../img/FundoNavBar3.png);
 }
 
 .navbar-nav {
@@ -103,7 +103,7 @@ nav a {
 #backgroundLogin {
     width: auto;
     height: auto;
-    background-image: url(../img/FundoNavBar.jpg);
+    background-image: url(../img/FundoNavBar2.png);
 }
 
 /*Jogos*/
