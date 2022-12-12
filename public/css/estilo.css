@@ -2,7 +2,27 @@
 body {
     width: auto;
     height: auto;
-    background-image: url(../img/Fundo.jpg);
+    background-image: url(../img/FundoNavBar14.jpg);
+}
+
+.fundoLogo {
+    width: auto;
+    height: auto;
+    border: 1px solid gray;
+    padding: 1px 1px;
+    border-radius: 10px;
+    color: black;
+    background-image: url(../img/fire.jpg);
+}
+
+.fundoItemNavBar {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    border: 1px solid gray;
+    padding: 1px 1px;
+    border-radius: 10px;
+    background-image: url(../img/fire.jpg);
 }
 
 li {
@@ -16,7 +36,7 @@ li {
     padding: 10px 20px;
     border-radius: 10px;
     color: black;
-    background-image: url(../img/Fundo.jpg);
+    background-image: url(../img/FundoNavBar15.jpg);
 
 
 }
@@ -55,7 +75,7 @@ li {
 #navbarBackgraud {
     width: auto;
     height: auto;
-    background-image: url(../img/FundoNavBar3.png);
+    background-image: url(../img/FundoNavBar14.jpg);
 }
 
 .navbar-nav {
@@ -85,6 +105,7 @@ nav a {
 .TituloPost {
     margin-top: 160px;
     margin-left: 15px;
+    color: white;
 }
 
 /*Formulario do usuario*/
@@ -100,10 +121,18 @@ nav a {
     margin-top: 30px;
 }
 
+#informacao {
+    max-width: 50rem; 
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
 #backgroundLogin {
     width: auto;
     height: auto;
-    background-image: url(../img/FundoNavBar2.png);
+    background-image: url(../img/FundoNavBar11.jpg);
 }
 
 /*Jogos*/

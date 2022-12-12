@@ -1,19 +1,19 @@
 <%- include('../partials/header') %>
-    <div class="card text-white bg-dark mb-3" style="max-width: 40rem;" id="backgroundLogin">
-      <div class="card-body">
-        <form action='/usuarios/novo' method='POST'>
+<div class="card-body" id="informacao">
+  <div class="caixa">
+        <form action='/usuarios/novo' method='POST' class="caixaConteudo">
           <div class="form-group">
-            <label for="nomeUsuario">Nome de usuário</label>
+            <label for="nomeUsuario"><h5>Nome de usuário:</h5></label>
             <input type="text" class="form-control" id="nomeUsuario" aria-describedby="nameHelp"
               placeholder="Seu nome de usuário" name='username'>
           </div>
           <div class="form-group">
-            <label for="emailUsuario">Endereço de email</label>
+            <label for="emailUsuario"><h5>Endereço de email:</h5></label>
             <input type="text" class="form-control" id="emailUsuario" aria-describedby="emailHelp"
               placeholder="Seu email" name='useremail'>
           </div>
           <div class="form-group">
-            <label for="senhaUsuario">Senha</label>
+            <label for="senhaUsuario"><h5>Senha:</h5></label>
             <input type="password" class="form-control" id="senhaUsuario" placeholder="Senha" name='password'>
           </div>
           <a class="nav-link active" href="/usuarios/login">Já possuo cadastro</a>

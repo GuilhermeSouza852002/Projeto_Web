@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-    <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
-        <div class="card-body">
+<%- include('../partials/navbar') %>
+        <div class="card-body" id="informacao">
             <% for( let c of usuarios ) { %>
                 <ul>
                     <li class="caixa">
@@ -16,6 +16,6 @@
                     <a href="/home"><button class="btn btn-primary">Voltar para pagina principal</button></a>
 
 
-        </div>
+        
     </div>
     <%- include('../partials/footer') %>

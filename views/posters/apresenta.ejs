@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
-        <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
-            <div class="card-body">
+<%- include('../partials/navbar') %>
+<div class="card-body" id="informacao">
+    <div class="caixa">
                 <div class="caixaConteudo">
-                <h2>
+                <h5>
                     <%=publicacao.poster%> - <%=publicacao.User.username%>
-                </h2>
+                </h5>
                 </div>
                 <div class="formBotoes">
                     <a href="/publicacoes/<%=publicacao.id%>/edit">Editar poster</a>

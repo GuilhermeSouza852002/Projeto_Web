@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
-<div class="card text-white bg-dark mb-3" style="max-width: 40rem;" id="backgroundLogin">
-    <div class="card-body">
-    <form action='/publicacoes/posters' method='POST'>
+<%- include('../partials/navbar') %>
+<div class="card-body" id="informacao">
+    <div class="caixa">
+    <form action='/publicacoes/posters' method='POST' class="caixaConteudo">
         <section>
             <div class="form-group">
                 <label>Nome do usuário</label>
