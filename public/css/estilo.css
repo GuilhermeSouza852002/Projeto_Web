@@ -109,12 +109,6 @@ nav a {
 }
 
 /*Formulario do usuario*/
-.card-header {
-    margin-left: auto;
-    margin-right: auto;
-    border: 0px;
-}
-
 .card {
     margin-left: auto;
     margin-right: auto;
@@ -127,20 +121,6 @@ nav a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 70px;
-}
-
-#backgroundLogin {
-    width: auto;
-    height: auto;
-    background-image: url(../img/FundoNavBar11.jpg);
-}
-
-/*Jogos*/
-/*Campo de pesquisa*/
-#pesquisaJogos {
-    margin-top: 130px;
-    width: 300px;
-    left: 20px;
 }
 
 /*Imagens*/
@@ -168,13 +148,6 @@ nav a {
         margin-top: 60px;
         width: auto;
     }
-
-    /*Navbar*/
-    /*#navbarBackgraud {
-    width: auto; 
-    height: auto;
-    background-image: url(../img/FundoNavBar.jpg);
-}*/
 
     .navbar-nav {
         margin-top: 20px;
@@ -225,11 +198,6 @@ nav a {
         width: auto;
     }
 
-    /*Navbar*/
-    /*#navbarBackgraud {
-    background-image: url(../img/FundoNavBar.jpg);
-}*/
-
     .navbar-nav {
         margin-left: auto;
     }
@@ -273,11 +241,6 @@ nav a {
         margin-top: 60px;
         width: auto;
     }
-
-    /*Navbar*/
-    /*#navbarBackgraud {
-    background-image: url(../img/FundoNavBar.jpg);
-}*/
 
     .navbar-nav {
         margin-left: auto;
