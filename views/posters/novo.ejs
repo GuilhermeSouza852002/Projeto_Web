@@ -1,15 +1,24 @@
-<body>
-    <h1>Criar poster</h1>
+<%- include('../partials/header') %>
+<div class="card text-white bg-dark mb-3" style="max-width: 40rem;" id="backgroundLogin">
+    <div class="card-body">
     <form action='/publicacoes/posters' method='POST'>
         <section>
-            <label>Digite o nome do usuário: </label>
-            <input type="text" id='nomeUsuario' placeholder="Digite o nome do usuário" name='username'>
+            <div class="form-group">
+                <label>Nome do usuário</label>
+                <input type="text" class="form-control" id="nomeUsuario" placeholder="Digite o nome do usuário" name='username'>
+              </div>
         </section>
 
         <section>
-            <label>Comentário: </label>
+            <div class="form-group">
+                <label>Poster</label>
             <br>
-            <textarea id="poster" cols='30' rows='5' name='poster'></textarea>
+            <textarea id="poster" class="md-textarea form-control" cols='50' rows='10' name='poster'></textarea>
+            </div>
         </section>
-        <button>Enviar</button>
+        <button class="btn btn-primary">Enviar</button>
+        <a href="/publicacoes/posters">Voltar</a>
     </form>
+    </div>
+</div>
+    <%- include('../partials/footer') %>

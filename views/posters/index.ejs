@@ -1,18 +1,21 @@
 <%- include('../partials/header') %>
-
-    <body>
-        <h1>Posters dos usuarios</h1>
-        <ul>
-            <% for( let c of publicacoes ) { %>
-                <li>
-                    <%=c.poster%> - <b>
-                            <%=c.User.username%>
-                        </b>
-                        <a href="/publicacoes/<%=c.id%>">Detalhes</a>
-                </li>
-                <% } %>
-        </ul>
-
-        <a href="/home">Voltar para pagina principal</a>
-
+        <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
+            <div class="card-body">
+                <h3 style="text-align: center;">Posters</h3>
+                <% for( let c of publicacoes ) { %>
+                    <ul>
+                        
+                        <li class="caixa">
+                            <h5>Poster de : <%=c.User.username%>
+                            </h5>
+                            <p class="caixaConteudo">
+                                <%=c.poster%>
+                            </p>
+                            <a href="/publicacoes/<%=c.id%>"><button class="btn btn-primary">Detalhes</button></a>
+                        </li>
+                    </ul>
+                    <% } %>
+                    <a href="/home"><button class="btn btn-primary">Voltar para pagina principal</button></a>
+            </div>
+        </div>
         <%- include('../partials/footer') %>

@@ -126,7 +126,7 @@ roteador.delete('/:id', async (req, res) => {
             where: { id: req.params.id }
         }
     );
-
+    //res.status(201).send('usuario deletado');
     res.redirect('/usuarios/settings');
 });
 

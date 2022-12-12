@@ -1,12 +1,28 @@
 <%- include('../partials/header') %>
-
-    <body>
-
         <h1>Editar usuario</h1>
         <form action="/usuarios/<%=usuario.id%>?_method=PATCH" method="POST">
-            <textarea name="username" id='' cols='30' rows='10'><%=usuario.username%></textarea>
-            <textarea name="useremail" id='' cols='30' rows='10'><%=usuario.useremail%></textarea>
-            <textarea name="password" id='' cols='30' rows='10'><%=usuario.password%></textarea>
-            <button>Salvar</button>
+            <div class="md-form mb-4 pink-textarea active-pink-textarea">
+                <i class="fas fa-angle-double-right prefix"></i>
+                <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;"
+                    id="backgroundLogin">
+                    <div class="card-body">
+                        <textarea name="username" id="form21" class="md-textarea form-control" cols='50'
+                            rows='1'><%=usuario.username%></textarea>
+                    </div>
+                    <div class="md-form mb-4 pink-textarea active-pink-textarea">
+                        <i class="fas fa-angle-double-right prefix"></i>
+                        <textarea name="useremail" id="form21" class="md-textarea form-control" cols='50'
+                            rows="1"><%=usuario.useremail%></textarea>
+                    </div>
+                    <div class="md-form mb-4 pink-textarea active-pink-textarea">
+                        <i class="fas fa-angle-double-right prefix"></i>
+                        <textarea name="password" id="form21" class="md-textarea form-control" cols='50'
+                            rows="1"><%=usuario.password%></textarea>
+                    </div>
+                </div>
+            </div>
+                    <button class="btn btn-primary">Salvar alteração</button>
+                    <a href="/usuarios/settings">Voltar</a>
+
         </form>
         <%- include('../partials/footer') %>

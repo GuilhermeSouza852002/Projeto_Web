@@ -1,25 +1,21 @@
 <%- include('../partials/header') %>
-
-    <body>
-
-        <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;"
-            id="backgroundLogin">
-            <div class="card-body">
-                <% for( let c of usuarios ) { %>
-                    <ul>
-                        <li class="caixa">
-                            <p class="caixaConteudo">Nome: <%=c.username%> <br> Email: <%=c.useremail%> <br> Senha:
-                                        <%=c.password%>
-                            </p>
-                            <a href="/usuarios/<%=c.id%>">Detalhes</a>
-                        </li>
-                    </ul>
+    <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
+        <div class="card-body">
+            <% for( let c of usuarios ) { %>
+                <ul>
+                    <li class="caixa">
+                        <p class="caixaConteudo">Nome: <%=c.username%> <br> Email: <%=c.useremail%> <br> Senha:
+                                    <%=c.password%>
+                        </p>
+                        <a href="/usuarios/<%=c.id%>"><button class="btn btn-primary">Detalhes</button></a>
+                    </li>
+                </ul>
 
 
-                    <% } %>
-                        <a href="/home">Voltar para pagina principal</a>
+                <% } %>
+                    <a href="/home"><button class="btn btn-primary">Voltar para pagina principal</button></a>
 
 
-            </div>
         </div>
-        <%- include('../partials/footer') %>
+    </div>
+    <%- include('../partials/footer') %>

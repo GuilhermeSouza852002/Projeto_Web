@@ -2,20 +2,23 @@
     <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;" id="backgroundLogin">
         <div class="card-body">
             <div class="caixaConteudo">
-                <h1 class="caixaConteudo">ID do usuario: <%=usuario.id%>
-                </h1>
-                <h2 class="caixaConteudo">Nome: <%=usuario.username%>
-                </h2>
-                <h2 class="caixaConteudo">Email: <%=usuario.useremail%>
-                </h2>
-                <h2 class="caixaConteudo">Senha: <%=usuario.password%>
-                </h2>
+                <h4 class="caixaConteudo">ID do usuario: <%=usuario.id%>
+                </h4>
+                <h4 class="caixaConteudo">Nome: <%=usuario.username%>
+                </h4>
+                <h4 class="caixaConteudo">Email: <%=usuario.useremail%>
+                </h4>
+                <h4 class="caixaConteudo">Senha: <%=usuario.password%>
+                </h4>
             </div>
-            <a href="/usuarios/<%=usuario.id%>/edit">Editar usuario</a>
-            <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE">
-                <button>Apagar</button>
+            <div class="formBotoes">
+                <a href="/usuarios/<%=usuario.id%>/edit">Ediatar usuario</a>
+                <a href="/usuarios/settings">Voltar</a>
+            </div>
+            <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE" class="formBotoes">
+                <button class="btn btn-primary">Apagar</button>
+
             </form>
-            <a href="/home">Voltar para o index</a>
         </div>
     </div>
     <%- include('../partials/footer') %>
