@@ -1,26 +1,31 @@
 <%- include('../partials/header') %>
-<%- include('../partials/navbar') %>
-    <div class="card-body" id="informacao">
-        <div class="caixa">
-            <div class="caixaConteudo">
-                <h5 class="caixaConteudo"><b>Código de usuario:</b> <%=usuario.id%>
-                </h5>
-                <h5 class="caixaConteudo"><b>Nome:</b> <%=usuario.username%>
-                </h5>
-                <h5 class="caixaConteudo"><b>Email:</b> <%=usuario.useremail%>
-                </h5>
-                <h5 class="caixaConteudo"><b>Senha:</b> <%=usuario.password%>
-                </h5>
+    <%- include('../partials/navbar') %>
+        <div class="card-body" id="informacao">
+            <div class="caixa">
+                <div class="caixaConteudo">
+                    <h5 class="caixaConteudo"><b>Código de usuário:</b>
+                        <%=usuario.id%>
+                    </h5>
+                    <h5 class="caixaConteudo"><b>Nome:</b>
+                        <%=usuario.username%>
+                    </h5>
+                    <h5 class="caixaConteudo"><b>Email:</b>
+                        <%=usuario.useremail%>
+                    </h5>
+                    <h5 class="caixaConteudo"><b>Senha:</b>
+                        <%=usuario.password%>
+                    </h5>
 
-                <div class="formBotoes">
-                    <a href="/usuarios/<%=usuario.id%>/edit">Ediatar usuario</a>
-                    <a href="/usuarios/settings">Voltar</a>
+                    <div class="formBotoes">
+                        <h6><a href="/usuarios/<%=usuario.id%>/edit">Editar usuário</a><br><br>
+                            <a href="/usuarios/settings">Voltar</a>
+                        </h6>
+                    </div>
+                    <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE" class="formBotoes">
+                        <button class="btn btn-primary" id="botaoApaga">Apagar</button>
+
+                    </form>
                 </div>
-                <form method="POST" action="/usuarios/<%=usuario.id %>?_method=DELETE" class="formBotoes">
-                    <button class="btn btn-primary">Apagar</button>
-
-                </form>
             </div>
         </div>
-    </div>
-    <%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>

@@ -29,6 +29,14 @@ li {
     list-style-type: none;
 }
 
+#botaoApaga {
+    background-color: #800000;
+}
+
+#botaoCriar {
+    background-color: green;
+}
+
 .caixa {
     width: auto;
     height: auto;
@@ -116,7 +124,7 @@ nav a {
 }
 
 #informacao {
-    max-width: 50rem; 
+    max-width: 50rem;
     max-height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -265,5 +273,9 @@ nav a {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+
+    #botoes {
+        margin-left: 9%;
     }
 }

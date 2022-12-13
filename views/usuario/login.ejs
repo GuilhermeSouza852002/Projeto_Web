@@ -1,19 +1,24 @@
 <%- include('../partials/header') %>
-<div class="card-body" id="informacao">
-  <div class="caixa">
+  <div class="card-body" id="informacao">
+    <div class="caixa">
       <form action='/usuarios/login' method='POST' class="caixaConteudo">
         <div class="form-group">
-          <label for="emailUsuario"><h5>Endereço de email:</h5></label>
+          <label for="emailUsuario">
+            <h5>Endereço de email:</h5>
+          </label>
           <input type="text" class="form-control" id="emailUsuario" aria-describedby="emailHelp" placeholder="Seu email"
             name='useremail'>
         </div>
         <div class="form-group">
-          <label for="senhaUsuario"><h5>Senha:</h5></label>
+          <label for="senhaUsuario">
+            <h5>Senha:</h5>
+          </label>
           <input type="password" class="form-control" id="senhaUsuario" placeholder="Senha" name='password'>
         </div>
-        <a class="nav-link active" href="/usuarios/cadastrousuario">Não possuo cadastro</a>
-        <a class="nav-link active" href="/home">Voltar ao inicio</a>
-        <button class="btn btn-primary">Entrar</button>
+        <h6><a class="nav-link active" href="/usuarios/cadastrousuario">Não possuo cadastro</a>
+          <a class="nav-link active" href="/home">Voltar ao início</a>
+          <button class="btn btn-primary">Entrar</button>
+        </h6>
       </form>
     </div>
   </div>

@@ -1,20 +1,28 @@
-<%- include('../partials/header') %>
-        <h1>Editar poster</h1>
-        <form action="/publicacoes/<%=publicacao.id%>?_method=PATCH" method="POST">
-
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/estilo.css">
+<div class="card-body" id="informacao">
+    <div class="caixa">
+        <h1 style="color: white;">Redefinir poster</h1><br>
+        <form action="/publicacoes/<%=publicacao.id%>?_method=PATCH" method="POST" class="caixaConteudo">
             <div class="md-form mb-4 pink-textarea active-pink-textarea">
                 <i class="fas fa-angle-double-right prefix"></i>
-                <div class="card text-white bg-dark mb-3" style="max-width: 50rem;" style="max-height: auto;"
-                    id="backgroundLogin">
-                    <div class="card-body">
-                        <textarea name="gameName" id="" class="md-textarea form-control" cols='50' rows='1'><%=publicacao.gameName%></textarea>
-                    </div>
-                    <div class="card-body">
-                        <textarea name="poster" id="" class="md-textarea form-control" cols='50' rows='10'><%=publicacao.poster%></textarea>
-                    </div>
-                </div>
+                <label for="nomeUsuario">
+                    <h5>Nome do jogo:</h5>
+                </label>
+                <textarea name="gameName" id="" class="md-textarea form-control" cols='50'
+                    rows='1'><%=publicacao.gameName%></textarea>
             </div>
-                    <button class="btn btn-primary">Salvar alteração</button>
-                    <a href="/publicacoes/posters">Voltar</a>
-        </form>
-<%- include('../partials/footer') %>
+            <div class="md-form mb-4 pink-textarea active-pink-textarea">
+                <i class="fas fa-angle-double-right prefix"></i>
+                <label for="nomeUsuario">
+                    <h5>Descrição do poster:</h5>
+                </label>
+                <textarea name="poster" id="" class="md-textarea form-control" cols='50'
+                    rows='10'><%=publicacao.poster%></textarea>
+            </div>
+            <h6><button class="btn btn-primary">Salvar alteração</button>
+                <a href="/publicacoes/posters">Voltar</a>
+            </h6>
+    </div>
+</div>
+</form>

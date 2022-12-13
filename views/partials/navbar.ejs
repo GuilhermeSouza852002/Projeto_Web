@@ -1,9 +1,9 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbarBackgraud">
   <div class="fundoLogo">
-  <a class="navbar-brand" href="/home">
-    <img src="../img/fogueira.png" width="40" height="40" class="d-inline-block align-top" alt="" id="icones">
-    Summon Players
-  </a>
+    <a class="navbar-brand" href="/home">
+      <img src="../img/fogueira.png" width="40" height="40" class="d-inline-block align-top" alt="" id="icones">
+      Summon Players
+    </a>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
@@ -12,49 +12,49 @@
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <div class="fundoItemNavBar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/home">Home</a>
-      </li>
-      <% if ( logado ) { %>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Post
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/publicacoes/novo">Criar</a>
-            <a class="dropdown-item" href="/publicacoes/posters">Editar</a>
-          </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <%= usuarioLogado %> <img src="../img/ornstein_monstrando_lingua.jpg" width="35" height="35"
-                class="d-inline-block align-top" alt="" id="icones">
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/usuarios/settings">Settingns</a>
-            <a class="dropdown-item" href="/usuarios/logoff">Logoff</a>
-          </div>
-        </li>
-        <% } else { %>
+        <% if ( logado ) { %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Perfil <img src="../img/PerfilVazio1.png" width="35" height="35" class="d-inline-block align-top" alt=""
-                id="icones">
+              Post
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/usuarios/login">Entrar</a>
-              <a class="dropdown-item" href="/usuarios/cadastrousuario">Criar</a>
+              <a class="dropdown-item" href="/publicacoes/novo">Criar</a>
+              <a class="dropdown-item" href="/publicacoes/posters">Posters</a>
             </div>
-          
           </li>
-       
-          <% } %>
-       
-    </ul>
-  </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= usuarioLogado %> <img src="../img/ornstein_monstrando_lingua.jpg" width="35" height="35"
+                  class="d-inline-block align-top" alt="" id="icones">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/usuarios/settings">Settingns</a>
+              <a class="dropdown-item" href="/usuarios/logoff">Logoff</a>
+            </div>
+          </li>
+          <% } else { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Perfil <img src="../img/PerfilVazio1.png" width="35" height="35" class="d-inline-block align-top" alt=""
+                  id="icones">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/usuarios/login">Entrar</a>
+                <a class="dropdown-item" href="/usuarios/cadastrousuario">Criar</a>
+              </div>
+
+            </li>
+
+            <% } %>
+
+      </ul>
+    </div>
   </div>
 </nav>

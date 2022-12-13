@@ -1,25 +1,32 @@
 <%- include('../partials/header') %>
-<div class="card-body" id="informacao">
-  <div class="caixa">
-        <form action='/usuarios/novo' method='POST' class="caixaConteudo">
-          <div class="form-group">
-            <label for="nomeUsuario"><h5>Nome de usuário:</h5></label>
-            <input type="text" class="form-control" id="nomeUsuario" aria-describedby="nameHelp"
-              placeholder="Seu nome de usuário" name='username'>
-          </div>
-          <div class="form-group">
-            <label for="emailUsuario"><h5>Endereço de email:</h5></label>
-            <input type="text" class="form-control" id="emailUsuario" aria-describedby="emailHelp"
-              placeholder="Seu email" name='useremail'>
-          </div>
-          <div class="form-group">
-            <label for="senhaUsuario"><h5>Senha:</h5></label>
-            <input type="password" class="form-control" id="senhaUsuario" placeholder="Senha" name='password'>
-          </div>
-          <a class="nav-link active" href="/usuarios/login">Já possuo cadastro</a>
-          <a class="nav-link active" href="/home">Voltar ao inicio</a>
+  <div class="card-body" id="informacao">
+    <div class="caixa">
+      <form action='/usuarios/novo' method='POST' class="caixaConteudo">
+        <div class="form-group">
+          <label for="nomeUsuario">
+            <h5>Nome de usuário:</h5>
+          </label>
+          <input type="text" class="form-control" id="nomeUsuario" aria-describedby="nameHelp"
+            placeholder="Seu nome de usuário" name='username'>
+        </div>
+        <div class="form-group">
+          <label for="emailUsuario">
+            <h5>Endereço de email:</h5>
+          </label>
+          <input type="text" class="form-control" id="emailUsuario" aria-describedby="emailHelp" placeholder="Seu email"
+            name='useremail'>
+        </div>
+        <div class="form-group">
+          <label for="senhaUsuario">
+            <h5>Senha:</h5>
+          </label>
+          <input type="password" class="form-control" id="senhaUsuario" placeholder="Senha" name='password'>
+        </div>
+        <h6><a class="nav-link active" href="/usuarios/login">Já possuo cadastro</a>
+          <a class="nav-link active" href="/home">Voltar ao início</a>
           <button class="btn btn-primary">Cadastre-se</button>
-        </form>
-      </div>
+        </h6>
+      </form>
     </div>
-    <%- include('../partials/footer') %>
+  </div>
+  <%- include('../partials/footer') %>

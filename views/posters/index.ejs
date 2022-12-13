@@ -1,20 +1,19 @@
 <%- include('../partials/header') %>
-<%- include('../partials/navbar') %>
-<div class="card-body" id="informacao">
-                <% for( let c of publicacoes ) { %>
-                    <ul>
-                        
-                        <li class="caixa">
-                            <h5 style="color: white;"><%=c.gameName%>
-                            </h5>
-                            <p class="caixaConteudo">
-                                <%=c.poster%> 
-                            </p>
-                            <a href="/publicacoes/<%=c.id%>"><button class="btn btn-primary">Detalhes</button></a>
-                        </li>
-                    </ul>
-                    <% } %>
-                    <a href="/home"><button class="btn btn-primary">Voltar para pagina principal</button></a>
-            </div>
-        
+    <%- include('../partials/navbar') %>
+        <div class="card-body" id="informacao">
+            <% for( let c of publicacoes ) { %>
+                <ul>
+
+                    <li class="caixa">
+                        <h5 style="color: white;">
+                            <%=c.gameName%>
+                        </h5>
+                        <p class="caixaConteudo">
+                            <%=c.poster%>
+                        </p>
+                        <a href="/publicacoes/<%=c.id%>"><button class="btn btn-primary">Detalhes</button></a>
+                    </li>
+                </ul>
+                <% } %>
+        </div>
         <%- include('../partials/footer') %>

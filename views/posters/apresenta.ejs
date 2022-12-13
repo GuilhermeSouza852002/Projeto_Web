@@ -4,24 +4,27 @@
             <div class="caixa">
                 <div class="caixaConteudo">
                     <h5>
-                        <b>Criado pelo usuário:</b> <%=publicacao.User.username%> <br><br>
-                        <h5>
-                            <b>Jogo:</b> <%=publicacao.gameName%> 
-                        </h5>
+                        <b>Criado pelo usuário:</b>
+                        <%=publicacao.User.username%> <br><br>
+                            <h5>
+                                <b>Jogo:</b>
+                                <%=publicacao.gameName%>
+                            </h5>
                     </h5>
                     <div class="caixaConteudo">
                         <h5>
-                            <b>Poster</b> <br><br> <%=publicacao.poster%>
+                            <b>Poster</b> <br><br>
+                            <%=publicacao.poster%>
                         </h5>
                     </div>
+                    <div class="formBotoes">
+                        <h6><a href="/publicacoes/<%=publicacao.id%>/edit">Editar poster</a></h6><br>
+                        <h6><a href="/publicacoes/posters">Voltar</a></h6>
+                    </div>
+                    <form method="POST" action="/publicacoes/<%=publicacao.id %>?_method=DELETE" class="formBotoes">
+                        <button class="btn btn-primary" id="botaoApaga">Apagar</button>
+                    </form>
                 </div>
-                <div class="formBotoes">
-                    <a href="/publicacoes/<%=publicacao.id%>/edit">Editar poster</a>
-                    <a href="/publicacoes/posters">Voltar</a>
-                </div>
-                <form method="POST" action="/publicacoes/<%=publicacao.id %>?_method=DELETE" class="formBotoes">
-                    <button class="btn btn-primary">Apagar</button>
-                </form>
             </div>
         </div>
         <%- include('../partials/footer') %>
