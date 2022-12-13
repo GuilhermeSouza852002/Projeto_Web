@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
-<%- include('../partials/navbar') %>
+    <%- include('../partials/navbar') %>
         <div class="card-body" id="informacao">
             <% for( let c of usuarios ) { %>
                 <ul>
                     <li class="caixa">
-                        <p class="caixaConteudo">Nome: <%=c.username%> <br> Email: <%=c.useremail%> <br> Senha:
-                                    <%=c.password%>
+                        <p class="caixaConteudo"><b>Nome de usuário:</b> <%=c.username%>
+                        </p>
+                        <p class="caixaConteudo"><b>Email:</b> <%=c.useremail%>
+                        </p>
+                        <p class="caixaConteudo"><b>Senha:</b> <%=c.password%>
                         </p>
                         <a href="/usuarios/<%=c.id%>"><button class="btn btn-primary">Detalhes</button></a>
                     </li>
@@ -16,6 +19,6 @@
                     <a href="/home"><button class="btn btn-primary">Voltar para pagina principal</button></a>
 
 
-        
-    </div>
-    <%- include('../partials/footer') %>
+
+        </div>
+        <%- include('../partials/footer') %>

@@ -1,11 +1,19 @@
 <%- include('../partials/header') %>
-<%- include('../partials/navbar') %>
-<div class="card-body" id="informacao">
-    <div class="caixa">
+    <%- include('../partials/navbar') %>
+        <div class="card-body" id="informacao">
+            <div class="caixa">
                 <div class="caixaConteudo">
-                <h5>
-                    <%=publicacao.poster%> - <%=publicacao.User.username%>
-                </h5>
+                    <h5>
+                        <b>Criado pelo usuário:</b> <%=publicacao.User.username%> <br><br>
+                        <h5>
+                            <b>Jogo:</b> <%=publicacao.gameName%> 
+                        </h5>
+                    </h5>
+                    <div class="caixaConteudo">
+                        <h5>
+                            <b>Poster</b> <br><br> <%=publicacao.poster%>
+                        </h5>
+                    </div>
                 </div>
                 <div class="formBotoes">
                     <a href="/publicacoes/<%=publicacao.id%>/edit">Editar poster</a>
@@ -16,4 +24,4 @@
                 </form>
             </div>
         </div>
-                <%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>

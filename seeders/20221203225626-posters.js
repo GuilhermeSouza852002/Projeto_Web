@@ -6,19 +6,23 @@ module.exports = {
         await queryInterface.bulkInsert('posters', [
             {
                 userId: 1,
-                poster: 'lol that is so funny!'
+                poster: 'Missão 1',
+                gameName: 'Dark Souls 1'
             },
             {
                 userId: 2,
-                poster: 'I like to go birdwatching with my dog'
+                poster: 'Missão 2',
+                gameName: 'Dark Souls 2'
             },
             {
                 userId: 3,
-                poster: 'Plz delete your account, Todd'
+                poster: 'Missão 3',
+                gameName: 'Dark Souls 3'
             },
             {
                 userId: 4,
-                poster: 'woof woof woof'
+                poster: 'Missão 4',
+                gameName: 'Elden Ring'
             }
         ], {});
 

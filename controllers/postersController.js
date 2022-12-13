@@ -13,6 +13,7 @@ roteador.get('/posters', async (req, res) => {
     });
 
     publicacoes.username = publicacoes.User?.username;
+    publicacoes.gameName = publicacoes.User?.gameName;
     res.render('posters/index', { publicacoes });
 });
 
@@ -36,7 +37,7 @@ roteador.get('/:id/edit', async (req, res) => {
 });
 
 roteador.post('/posters', async (req, res) => {
-    const { username, poster } = req.body;
+    const { username, poster, gameName } = req.body;
 
     const { id } = await User.findOne({
         where: { username: username }
@@ -46,7 +47,7 @@ roteador.post('/posters', async (req, res) => {
         res.send('<h1>Usuário não encontrado</h1>');
     } else {
         const userId = id;
-        await Poster.create({ username, poster, userId });
+        await Poster.create({ username, poster, gameName, userId });
         res.redirect('/publicacoes/posters');
     }
 
@@ -56,9 +57,10 @@ roteador.post('/posters', async (req, res) => {
 roteador.patch('/:id', async (req, res) => {
 
     const poster = req.body.poster;
+    const gameName = req.body.gameName;
 
     await Poster.update(
-        { poster },
+        { poster, gameName },
         {
             where: { id: req.params.id }
         }
